@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3945 3415 10 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #868686;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="group-23" transform="translate(3334 3483)">
+    <path id="path" class="cls-1" d="M7,10l5,5,5-5Z" transform="translate(604 -68)"/>
+    <path id="path-2" data-name="path" class="cls-1" d="M7,14l5-5,5,5Z" transform="translate(604 -77)"/>
+  </g>
+</svg>
