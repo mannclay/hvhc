@@ -46,33 +46,67 @@ a:link, a:visited {
 }
 a:hover, a:focus, a:active {
   color: #FFB95A;
+  color: #4D4D4D;
 }
-.patient-safty, .episode-care, .pop-health {
+header .menu > li > a {
+  padding: .5rem 1rem;
+}
+#menu-top-menu-1 li.patient-safety, #menu-top-menu-1 li.episode-care, #menu-top-menu-1 li.pop-health,
+.patient-safety, .episode-care, .pop-health {
 	color: #4d4d4d;
 }
-.patient-safty {
+#menu-top-menu-1 li.patient-safety, #menu-top-menu-1 li.episode-care, #menu-top-menu-1 li.pop-health {
+  display: inline-block;
+  padding: 7px 5px 15px 15px;
+}
+.patient-safety li, .episode-care li, .pop-health li {
+  display: inline-block;
+  padding: 0 .4rem 0 0;
+}
+#menu-top-menu-1 li.patient-safety a, #menu-top-menu-1 li.episode-care a, #menu-top-menu-1 li.pop-health a,
+.patient-safety li a, .episode-care li a, .pop-health li a {
+  padding: 7px 20px;
+  display: inline;
+  font-weight: bold;
+}
+#menu-top-menu-1 li.patient-safety a,
+.patient-safety li a {
 	background-color: #FFB95A;
 	box-shadow: 1px 1px 0 0 #FF9300;
 }
-.episode-care {
+#menu-top-menu-1 li.episode-care a,
+.episode-care li a {
 	background-color: #86BCE2;
 	box-shadow: 1px 1px 0 0 #6287A1;
 }
-.pop-health {
+#menu-top-menu-1 li.pop-health a,
+li.pop-health li a {
 	background-color: #82D3C6;
 	box-shadow: 1px 1px 0 0 #60A297;
 }
-.patient-safty:hover, .paient-safty.active {
+#menu-top-menu-1 li.patient-safety a:hover, #menu-top-menu-1 li.patient-safety.active a,
+.patient-safety li a:hover, .patient-safety li.active a {
 	background-color: transparent;
+  border: 1px solid #FFB95A;
+  box-shadow: none;
 	color: #FFB95A;
+  margin: -1px -1px;
 }
-.episode-care:hover, .episode-care.active {
+#menu-top-menu-1 li.episode-care a:hover, #menu-top-menu-1 .episode-care.active a,
+.episode-care li a:hover, .episode-care li.active a {
 	background-color: transparent;
+  border: 1px solid #86BCE2;
+  box-shadow: none;
 	color: #86BCE2;
+  margin: -1px -1px;
 }
-.pop-health:hover, .pop-health.active {
+#menu-top-menu-1 .pop-health a:hover, #menu-top-menu-1 .pop-health.active a,
+.pop-health li a:hover, .pop-health li.active a {
 	background-color: transparent;
+  border: 1px solid #82D3C6;
+  box-shadow: none;
 	color: #82D3C6;
+  margin: -1px -1px;
 }
 
 /*********************
@@ -84,8 +118,9 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 h1 {
 	color: #75A3C3;
-	font-family: 'Open Sans Bold', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
+  font-weight: bold;
 	text-transform: uppercase;
 }
 h2 {
@@ -95,8 +130,9 @@ h2 {
 }
 h3 {
 	color: #75A3C3;
-	font-family: 'Open Sans Bold', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
+  font-weight: bold;
 	text-transform: uppercase;
 }
 p {
@@ -107,6 +143,16 @@ p {
 /*********************
 HEADER STYLES
 *********************/
+
+#top-bar-menu .columns.logo-container {
+  padding: .45rem;
+}
+#top-bar-menu .columns.logo-container span {
+  vertical-align: bottom;
+  color: #4d4d4d;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .header ul.off-canvas-list li {
 	list-style: none;
@@ -156,20 +202,35 @@ NAVIGATION STYLES
 #menu-top-menu-secondary {
   float: right;
 }
-#menu-top-menu-secondary li:first-child {
+#menu-top-menu-1 > li,
+#menu-top-menu-secondary > li:first-child {
   background-color: #4D4D4D;
 }
-#menu-top-menu-secondary li:first-child a {
+#menu-top-menu-1 > li > a,
+#menu-top-menu-secondary > li:first-child > a {
   color: #fff;
 }
-#menu-top-menu-secondary li:last-child {
+#menu-top-menu-secondary > li:last-child {
   background-color: #C7C7C7;
+}
+#menu-top-menu-homepage > li > a {
+  padding: 0 0 1rem;
+}
+.homepage-content-links .sub-menu {
+  margin: 0;
+}
+.homepage-content-links .sub-menu li {
+  list-style-type: none;
 }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
+#content {
+  margin-top: 3rem;
+  min-height: 600px;
+}
 #content #inner-content {
 	padding: 4rem 1rem 0rem;
 }
@@ -385,6 +446,60 @@ COMMENT FORM STYLES
 }
 
 /*********************
+ACCORDIONS
+*********************/
+
+.accordion-container.ext {
+  border: 1px solid #C7C7C7;
+  padding: .7rem .5rem;
+  margin: 0 0 2rem;
+}
+.accordion-container h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4D4D4D;
+}
+.accordion-container .accordion {
+  border: none;
+}
+.accordion-container .accordion-item,
+.accordion-container .accordion-content,
+.accordion-title:focus, .accordion-title:hover,
+.accordion-container .accordion-item.is-active {
+  background-color: #F4F4F4;
+}
+.accordion-container .accordion-item {
+  margin: 0 0 .7rem;
+}
+.accordion-container .accordion-content,
+.accordion-container .accordion-item a {
+  border: none;
+}
+.accordion-container .accordion-title {
+  color: #868686;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  padding: .7rem .5rem;
+}
+.accordion-container .is-active .accordion-title {
+  color: #60A297;
+}
+.accordion-title:before {
+  display: none;
+}
+.accordion-title:after {
+  content: '^';
+  font-style: normal;
+  padding-left: 1rem;
+}
+
+.is-active > .accordion-title:after {
+  content: '>';
+  font-style: normal;
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 
@@ -410,7 +525,9 @@ FOOTER STYLES
 /*********************
 FOUNDATION STYLES
 *********************/
-
+.reveal {
+  box-shadow: 1px 1px 75px #ccc;
+}
 
 /*********************
 PLUGIN STYLES
